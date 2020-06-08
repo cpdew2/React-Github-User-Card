@@ -27,15 +27,15 @@ class FriendList extends React.Component {
         return (
             <FriendList>
                 <h2>Followers</h2>
-                {this.PaymentResponse.followers.map((follower, index) => {
-                    return <Friend key={index}>
+                {this.props.followers.map((follower, index) => {
+                    return  <Friend key={index}>
                     <FriendImg src={follower.avatar_url} />
                     {follower.login}
                     </Friend>
                 })}
             </FriendList>
-        );
-    }
-}
+        )
+    
+            };
 
 export default FriendList;
