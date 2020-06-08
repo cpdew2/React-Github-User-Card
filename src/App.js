@@ -9,12 +9,12 @@ import FriendList from './components/FriendList';
 import axios from 'axios';
 
 
-const Container = styled.div 
-//margin: auto;
-//display: flex;
-////max-width: 40%;
-//justify-content: space-between;
-//`
+const Container = styled.div `
+margin: auto;
+display: flex;
+max-width: 40%;
+justify-content: space-between;
+`
 
 class App extends React.Component {
   constructor() {

@@ -1,0 +1,41 @@
+import React from "react";
+import Styled from 'styled-components';
+
+const FriendList = styled.ul  `
+ max-width: 300px;
+ min-height: 200px;
+ box-sizing: border-box;
+ display: flex;
+ background-color: #f5f5dc;
+ flex-direction: column;
+ padding-right: 15px;
+ border: 7px solid pink;
+`
+
+const Friend = styled.h5 `
+text-decoration: none;
+`
+
+const FriendImg = styled.img `
+    max-width: 20px;
+    max-height: 20px;
+    padding-right: 10px;
+`
+
+class FriendList extends React.Component {
+    render( {
+        return (
+            <FriendList>
+                <h2>Followers</h2>
+                {this.PaymentResponse.followers.map((follower, index) => {
+                    return <Friend key={index}>
+                    <FriendImg src={follower.avatar_url} />
+                    {follower.login}
+                    </Friend>
+                })}
+            </FriendList>
+        );
+    }
+}
+
+export default FriendList;
