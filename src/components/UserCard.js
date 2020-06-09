@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
-import Card from './components/Card';
+import CardItems from './components/CardItems';
 
 const Cards = styled.div `
     box-sizing: border-box;
@@ -20,7 +20,7 @@ class UserCard extends Component {
         return (
             <Cards>
                 <Header image={this.props.avatar_url} usersname={this.props.login} />
-                <Card followers={this.props.followers} following={this.props.following} />
+                <CardItems followers={this.props.followers} following={this.props.following} />
             </Cards>
         );
     }

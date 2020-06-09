@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-class Card extends Component {
-    render( {
+class CardItems extends Component {
+    render() {
         return (
             <section className='card'>
                 <h4>Followers: {this.props.followers}</h4>
@@ -9,10 +9,10 @@ class Card extends Component {
                 {this.props.email !== null && (
                     <h4>Email: {this.props.email}</h4>
                 )}
-            </section>
             <a href={`https://github.com/${this.props.login}`}>GitHub</a>
+            </section>
         );
-    });
-};
+    };
+}
 
-export default Card;
+export default CardItems;
