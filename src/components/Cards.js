@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Card extends React.Component {
+class Card extends Component {
     render( {
         return (
             <section className='card'>
-                <h4>Followers: {this.props.follwers}</h4>
-                <h4>Following: {this.props.follwing}</h4>
+                <h4>Followers: {this.props.followers}</h4>
+                <h4>Following: {this.props.following}</h4>
                 {this.props.email !== null && (
                     <h4>Email: {this.props.email}</h4>
                 )}

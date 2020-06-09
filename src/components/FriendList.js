@@ -1,7 +1,7 @@
-import React from "react";
-import Styled from 'styled-components';
+import React, { Component } from "react";
+import styled from 'styled-components';
 
-const FriendList = styled.ul  `
+const FriendList = styled.ul `
  max-width: 300px;
  min-height: 200px;
  box-sizing: border-box;
@@ -22,20 +22,20 @@ const FriendImg = styled.img `
     padding-right: 10px;
 `
 
-class FriendList extends React.Component {
-    render( {
+class List extends Component {
+    render() {
         return (
             <FriendList>
                 <h2>Followers</h2>
                 {this.props.followers.map((follower, index) => {
-                    return  <Friend key={index}>
+                    return <Friend key={index}>
                     <FriendImg src={follower.avatar_url} />
                     {follower.login}
                     </Friend>
                 })}
             </FriendList>
-        )
-    
-            };
+            );
+        }
+    }
 
 export default FriendList;

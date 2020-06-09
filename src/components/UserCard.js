@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
-import Card from './compoents/Card';
+import Card from './components/Card';
 
 const Cards = styled.div `
     box-sizing: border-box;
@@ -15,14 +15,14 @@ const Cards = styled.div `
     padding-bottom: 10px;
 `
 
-class UserCard extends React.Component {
+class UserCard extends Component {
     render() {
         return (
             <Cards>
                 <Header image={this.props.avatar_url} usersname={this.props.login} />
                 <Card followers={this.props.followers} following={this.props.following} />
             </Cards>
-        )
+        );
     }
 }
 
