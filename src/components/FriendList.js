@@ -12,7 +12,7 @@ const FriendList = styled.ul `
  border: 7px solid pink;
 `
 
-const Friend = styled.h5 `
+const Friend = styled.h2 `
 text-decoration: none;
 `
 
